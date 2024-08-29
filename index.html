@@ -1,7 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interactif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        #media {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        #question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        #answer {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 20px;
+            display: none;
+        }
+        #nextButton {
+            font-size: 16px;
+            padding: 10px 20px;
+            display: none;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages. TEEEEESSTTTT</p>
+    <div id="timer">Temps restant : <span id="time">10</span>s</div>
+    <div id="media"></div>
+    <div id="question"></div>
+    <div id="answer"></div>
+    <button id="nextButton">Question suivante</button>
+
+    <script>
+        const questions = [
+            {
+                question: "Quelle est la capitale de la France ?",
+                answer: "Paris",
+                media: null,
+                time: 10
+            },
+            {
+                question: "Quel animal peut-on voir sur cette image ?",
+                answer: "Un lion",
+                media: '<img src="/api/placeholder/400/300" alt="Image d\'un lion">',
+                time: 15
+            }
+        ];
+
+        let currentQuestion = 0;
+        let timer;
+
+        function loadQuestion() {
+            const question = questions[currentQuestion];
+            document.getElementById('time').textContent = question.time;
+            document.getElementById('media').innerHTML = question.media || '';
+            document.getElementById('question').textContent = question.question;
+            document.getElementById('answer').style.display = 'none';
+            document.getElementById('answer').textContent = '';
+            document.getElementById('nextButton').style.display = 'none';
+
+            startTimer(question.time);
+        }
+
+        function startTimer(duration) {
+            let time = duration;
+            timer = setInterval(() => {
+                document.getElementById('time').textContent = time;
+                if (--time < 0) {
+                    clearInterval(timer);
+                    showAnswer();
+                }
+            }, 1000);
+        }
+
+        function showAnswer() {
+            const answer = questions[currentQuestion].answer;
+            document.getElementById('answer').textContent = `Réponse : ${answer}`;
+            document.getElementById('answer').style.display = 'block';
+            document.getElementById('nextButton').style.display = 'inline-block';
+        }
+
+        document.getElementById('nextButton').addEventListener('click', () => {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                alert('Quiz terminé !');
+            }
+        });
+
+        loadQuestion();
+    </script>
 </body>
 </html>
