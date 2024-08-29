@@ -1,87 +1,4 @@
-const questions = {
-    facile: [
-        {
-            question: "Quelle est la capitale de la France ?",
-            answer: "Paris",
-            media: null
-        },
-        {
-            question: "Quel animal peut-on voir sur cette image ?",
-            answer: "Un lion",
-            media: '<img src="/api/placeholder/400/300" alt="Image d\'un lion">'
-        },
-        {
-            question: "Combien y a-t-il de continents sur Terre ?",
-            answer: "7",
-            media: null
-        },
-        {
-            question: "Quelle planète est surnommée la planète rouge ?",
-            answer: "Mars",
-            media: null
-        },
-        {
-            question: "Quel est le plus grand mammifère terrestre ?",
-            answer: "L'éléphant d'Afrique",
-            media: null
-        }
-    ],
-    moyen: [
-        {
-            question: "Quel est le plus grand océan du monde ?",
-            answer: "L'océan Pacifique",
-            media: null
-        },
-        {
-            question: "Qui a peint La Joconde ?",
-            answer: "Léonard de Vinci",
-            media: '<img src="/api/placeholder/400/300" alt="Image de La Joconde">'
-        },
-        {
-            question: "En quelle année a débuté la Première Guerre mondiale ?",
-            answer: "1914",
-            media: null
-        },
-        {
-            question: "Quel est l'élément chimique le plus abondant dans l'univers ?",
-            answer: "L'hydrogène",
-            media: null
-        },
-        {
-            question: "Qui a écrit '1984' ?",
-            answer: "George Orwell",
-            media: null
-        }
-    ],
-    difficile: [
-        {
-            question: "Quelle est la formule chimique de l'eau ?",
-            answer: "H2O",
-            media: null
-        },
-        {
-            question: "En quelle année a eu lieu la Révolution française ?",
-            answer: "1789",
-            media: '<img src="/api/placeholder/400/300" alt="Image de la Révolution française">'
-        },
-        {
-            question: "Qui a formulé la théorie de la relativité ?",
-            answer: "Albert Einstein",
-            media: null
-        },
-        {
-            question: "Quel est le plus petit pays du monde ?",
-            answer: "Le Vatican",
-            media: null
-        },
-        {
-            question: "Qui a écrit 'L'Odyssée' ?",
-            answer: "Homère",
-            media: null
-        }
-    ]
-};
-
+let questions;
 let currentQuestions;
 let currentQuestionIndex = 0;
 let timer;
@@ -91,19 +8,32 @@ let numberOfQuestions;
 document.getElementById('startQuiz').addEventListener('click', startQuiz);
 document.getElementById('nextButton').addEventListener('click', nextQuestion);
 
+// Charger les questions depuis le fichier JSON
+fetch('questions.json')
+  .then(response => response.json())
+  .then(data => {
+    questions = data;
+    document.getElementById('startQuiz').disabled = false;
+  })
+  .catch(error => console.error('Erreur lors du chargement des questions:', error));
+
 function startQuiz() {
     const difficulty = document.getElementById('difficulty').value;
     timePerQuestion = parseInt(document.getElementById('timePerQuestion').value);
     numberOfQuestions = parseInt(document.getElementById('numberOfQuestions').value);
     
-    currentQuestions = shuffleArray(questions[difficulty]).slice(0, numberOfQuestions);
-    currentQuestionIndex = 0;
+    if (questions && questions[difficulty]) {
+        currentQuestions = shuffleArray(questions[difficulty]).slice(0, numberOfQuestions);
+        currentQuestionIndex = 0;
 
-    document.getElementById('config').style.display = 'none';
-    document.getElementById('quiz').style.display = 'block';
-    document.getElementById('totalQuestions').textContent = numberOfQuestions;
-    
-    loadQuestion();
+        document.getElementById('config').style.display = 'none';
+        document.getElementById('quiz').style.display = 'block';
+        document.getElementById('totalQuestions').textContent = numberOfQuestions;
+        
+        loadQuestion();
+    } else {
+        alert("Erreur: Impossible de charger les questions. Veuillez réessayer.");
+    }
 }
 
 function loadQuestion() {

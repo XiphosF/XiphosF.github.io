@@ -1,0 +1,83 @@
+{
+    "facile": [
+      {
+        "question": "Quelle est la capitale de la France ?",
+        "answer": "Paris",
+        "media": null
+      },
+      {
+        "question": "Quel animal peut-on voir sur cette image ?",
+        "answer": "Un lion",
+        "media": "<img src='/api/placeholder/400/300' alt='Image d'un lion'>"
+      },
+      {
+        "question": "Combien y a-t-il de continents sur Terre ?",
+        "answer": "7",
+        "media": null
+      },
+      {
+        "question": "Quelle planète est surnommée la planète rouge ?",
+        "answer": "Mars",
+        "media": null
+      },
+      {
+        "question": "Quel est le plus grand mammifère terrestre ?",
+        "answer": "L'éléphant d'Afrique",
+        "media": null
+      }
+    ],
+    "moyen": [
+      {
+        "question": "Quel est le plus grand océan du monde ?",
+        "answer": "L'océan Pacifique",
+        "media": null
+      },
+      {
+        "question": "Qui a peint La Joconde ?",
+        "answer": "Léonard de Vinci",
+        "media": "<img src='/api/placeholder/400/300' alt='Image de La Joconde'>"
+      },
+      {
+        "question": "En quelle année a débuté la Première Guerre mondiale ?",
+        "answer": "1914",
+        "media": null
+      },
+      {
+        "question": "Quel est l'élément chimique le plus abondant dans l'univers ?",
+        "answer": "L'hydrogène",
+        "media": null
+      },
+      {
+        "question": "Qui a écrit '1984' ?",
+        "answer": "George Orwell",
+        "media": null
+      }
+    ],
+    "difficile": [
+      {
+        "question": "Quelle est la formule chimique de l'eau ?",
+        "answer": "H2O",
+        "media": null
+      },
+      {
+        "question": "En quelle année a eu lieu la Révolution française ?",
+        "answer": "1789",
+        "media": "<img src='/api/placeholder/400/300' alt='Image de la Révolution française'>"
+      },
+      {
+        "question": "Qui a formulé la théorie de la relativité ?",
+        "answer": "Albert Einstein",
+        "media": null
+      },
+      {
+        "question": "Quel est le plus petit pays du monde ?",
+        "answer": "Le Vatican",
+        "media": null
+      },
+      {
+        "question": "Qui a écrit 'L'Odyssée' ?",
+        "answer": "Homère",
+        "media": null
+      }
+    ]
+  }
