@@ -12,6 +12,9 @@
             padding: 20px;
             text-align: center;
         }
+        #config, #quiz {
+            display: none;
+        }
         #timer {
             font-size: 24px;
             font-weight: bold;
@@ -31,49 +34,119 @@
             margin-bottom: 20px;
             display: none;
         }
-        #nextButton {
+        button {
             font-size: 16px;
             padding: 10px 20px;
-            display: none;
+            margin: 10px;
+        }
+        select, input {
+            font-size: 16px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
-    <div id="timer">Temps restant : <span id="time">10</span>s</div>
-    <div id="media"></div>
-    <div id="question"></div>
-    <div id="answer"></div>
-    <button id="nextButton">Question suivante</button>
+    <div id="config">
+        <h2>Configuration du Quiz</h2>
+        <div>
+            <label for="difficulty">Difficulté :</label>
+            <select id="difficulty">
+                <option value="facile">Facile</option>
+                <option value="moyen">Moyen</option>
+                <option value="difficile">Difficile</option>
+            </select>
+        </div>
+        <div>
+            <label for="timePerQuestion">Temps par question (secondes) :</label>
+            <input type="number" id="timePerQuestion" min="5" max="60" value="10">
+        </div>
+        <button id="startQuiz">Commencer le Quiz</button>
+    </div>
+
+    <div id="quiz">
+        <div id="timer">Temps restant : <span id="time"></span>s</div>
+        <div id="media"></div>
+        <div id="question"></div>
+        <div id="answer"></div>
+        <button id="nextButton">Question suivante</button>
+    </div>
 
     <script>
-        const questions = [
+        const easyQuestions = [
             {
                 question: "Quelle est la capitale de la France ?",
                 answer: "Paris",
-                media: null,
-                time: 10
+                media: null
             },
             {
                 question: "Quel animal peut-on voir sur cette image ?",
                 answer: "Un lion",
-                media: '<img src="/api/placeholder/400/300" alt="Image d\'un lion">',
-                time: 15
+                media: '<img src="/api/placeholder/400/300" alt="Image d\'un lion">'
             }
         ];
 
+        const mediumQuestions = [
+            {
+                question: "Quel est le plus grand océan du monde ?",
+                answer: "L'océan Pacifique",
+                media: null
+            },
+            {
+                question: "Qui a peint La Joconde ?",
+                answer: "Léonard de Vinci",
+                media: '<img src="/api/placeholder/400/300" alt="Image de La Joconde">'
+            }
+        ];
+
+        const hardQuestions = [
+            {
+                question: "Quelle est la formule chimique de l'eau ?",
+                answer: "H2O",
+                media: null
+            },
+            {
+                question: "En quelle année a eu lieu la Révolution française ?",
+                answer: "1789",
+                media: '<img src="/api/placeholder/400/300" alt="Image de la Révolution française">'
+            }
+        ];
+
+        let questions;
         let currentQuestion = 0;
         let timer;
+        let timePerQuestion;
+
+        document.getElementById('startQuiz').addEventListener('click', () => {
+            const difficulty = document.getElementById('difficulty').value;
+            timePerQuestion = parseInt(document.getElementById('timePerQuestion').value);
+
+            switch(difficulty) {
+                case 'facile':
+                    questions = easyQuestions;
+                    break;
+                case 'moyen':
+                    questions = mediumQuestions;
+                    break;
+                case 'difficile':
+                    questions = hardQuestions;
+                    break;
+            }
+
+            document.getElementById('config').style.display = 'none';
+            document.getElementById('quiz').style.display = 'block';
+            loadQuestion();
+        });
 
         function loadQuestion() {
             const question = questions[currentQuestion];
-            document.getElementById('time').textContent = question.time;
+            document.getElementById('time').textContent = timePerQuestion;
             document.getElementById('media').innerHTML = question.media || '';
             document.getElementById('question').textContent = question.question;
             document.getElementById('answer').style.display = 'none';
             document.getElementById('answer').textContent = '';
             document.getElementById('nextButton').style.display = 'none';
 
-            startTimer(question.time);
+            startTimer(timePerQuestion);
         }
 
         function startTimer(duration) {
@@ -100,10 +173,11 @@
                 loadQuestion();
             } else {
                 alert('Quiz terminé !');
+                document.getElementById('quiz').style.display = 'none';
+                document.getElementById('config').style.display = 'block';
+                currentQuestion = 0;
             }
         });
-
-        loadQuestion();
     </script>
 </body>
 </html>
