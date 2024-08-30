@@ -4,9 +4,37 @@ let currentQuestionIndex = 0;
 let timer;
 let timePerQuestion;
 let numberOfQuestions;
+let player;
 
 document.getElementById('startQuiz').addEventListener('click', startQuiz);
 document.getElementById('nextButton').addEventListener('click', nextQuestion);
+
+// Charger l'API YouTube
+function loadYouTubeAPI() {
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  }
+  
+  loadYouTubeAPI();
+  
+  // Fonction appelée lorsque l'API YouTube est prête
+  window.onYouTubeIframeAPIReady = function() {
+    player = new YT.Player('youtubePlayer', {
+      height: '360',
+      width: '640',
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  };
+  
+  function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.ENDED) {
+      startTimer();
+    }
+  }
 
 // Charger les questions depuis le fichier JSON
 fetch('questions.json')
@@ -40,14 +68,38 @@ function loadQuestion() {
     const question = currentQuestions[currentQuestionIndex];
     document.getElementById('currentQuestionNumber').textContent = currentQuestionIndex + 1;
     document.getElementById('time').textContent = timePerQuestion;
-    document.getElementById('media').innerHTML = question.media || '';
     document.getElementById('question').textContent = question.question;
     document.getElementById('answer').style.display = 'none';
     document.getElementById('answer').textContent = '';
     document.getElementById('nextButton').style.display = 'none';
-
-    startTimer();
-}
+  
+    if (question.media && question.media.type === 'video') {
+      loadVideoQuestion(question.media);
+    } else {
+      document.getElementById('media').innerHTML = question.media || '';
+      startTimer();
+    }
+  }
+  
+  function loadVideoQuestion(mediaInfo) {
+    const { url, start, end } = mediaInfo;
+    const videoId = extractYouTubeVideoId(url);
+    
+    player.loadVideoById({
+      videoId: videoId,
+      startSeconds: start,
+      endSeconds: end
+    });
+  
+    player.playVideo();
+  }
+  
+  function extractYouTubeVideoId(url) {
+    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+    const match = url.match(regExp);
+    return (match && match[7].length === 11) ? match[7] : false;
+  }
+  
 
 function startTimer() {
     let time = timePerQuestion;

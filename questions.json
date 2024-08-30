@@ -24,6 +24,16 @@
         "question": "Quel est le plus grand mammifère terrestre ?",
         "answer": "L'éléphant d'Afrique",
         "media": null
+      },
+      {
+        "question": "Que fait le personnage dans cette vidéo ?",
+        "answer": "Il joue du piano",
+        "media": {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "start": 15,
+          "end": 30
+        }
       }
     ],
     "moyen": [
