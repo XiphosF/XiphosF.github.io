@@ -6,8 +6,9 @@ let timePerQuestion;
 let numberOfQuestions;
 let player;
 let playerReady = false;
-let start_timestamp=0;
-let end_timestamp=0;
+// let start_timestamp=0;
+// let end_timestamp=0;
+let tmp=true
 
 document.getElementById('startQuiz').addEventListener('click', startQuiz);
 document.getElementById('nextButton').addEventListener('click', nextQuestion);
@@ -46,12 +47,18 @@ window.onYouTubeIframeAPIReady = function() {
   }
   
   function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PAUSED) {
-      startTimer();
-    }
-    if (event.data == YT.PlayerState.ENDED) {
+    console.log(event)
+    if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+      if (tmp==true){
         startTimer();
-      }
+        tmp=false;
+    }}
+    else if (event.data == YT.PlayerState.PLAYING){
+        tmp=true;
+    }
+        
+}
+
     // if (event.data == YT.PlayerState.CUED){
     //     player.playVideo();
     //     var playDuration = (end_timestamp - start_timestamp) * 1000;
@@ -61,7 +68,7 @@ window.onYouTubeIframeAPIReady = function() {
     //         console.log("AAAAAAAAAAAAAAAAA")
     //     }, playDuration);
     // }
-  }
+
 
 // Charger les questions depuis le fichier JSON
 fetch('questions.json')
@@ -100,26 +107,50 @@ function loadQuestion() {
     document.getElementById('answer').textContent = '';
     document.getElementById('nextButton').style.display = 'none';
     const mediaContainer = document.getElementById('media');
-    mediaContainer.innerHTML = '';
-    
-    if (question.media && question.media.type === 'video') {
-        // Créer le conteneur pour le lecteur YouTube
-        const youtubePlayerDiv = document.createElement('div');
-        youtubePlayerDiv.id = 'youtubePlayer';
-        mediaContainer.appendChild(youtubePlayerDiv);
-    
-        if (playerReady) {
-          loadVideoQuestion(question.media);
+    // mediaContainer.innerHTML = '';
+    const youtubePlayerContainer = document.getElementById('youtubePlayerContainer');
+    mediaContainer.style.display = 'none';
+    youtubePlayerContainer.style.display = 'none';
+    if (question.media) {
+        if (question.media.type === 'video') {
+            youtubePlayerContainer.style.display = 'block';
+            if (playerReady) {
+                loadVideoQuestion(question.media);
+            } else {
+                console.log("Le lecteur YouTube n'est pas encore prêt. La vidéo sera chargée une fois le lecteur initialisé.");
+            }
         } else {
-          createYouTubePlayer();
+            mediaContainer.style.display = 'block';
+            mediaContainer.innerHTML = question.media;
+            startTimer();
         }
-      } else if (question.media) {
-        mediaContainer.innerHTML = question.media;
-        startTimer();
-      } else {
-        startTimer();
-      }
     }
+    else{
+        startTimer();
+    }
+    
+}
+
+
+    
+    // if (question.media && question.media.type === 'video') {
+    //     // Créer le conteneur pour le lecteur YouTube
+    //     const youtubePlayerDiv = document.createElement('div');
+    //     youtubePlayerDiv.id = 'youtubePlayer';
+    //     mediaContainer.appendChild(youtubePlayerDiv);
+    
+    //     if (playerReady) {
+    //       loadVideoQuestion(question.media);
+    //     } else {
+    //       createYouTubePlayer();
+    //     }
+    //   } else if (question.media) {
+    //     mediaContainer.innerHTML = question.media;
+    //     startTimer();
+    //   } else {
+    //     startTimer();
+    //   }
+    // }
     
 
   
@@ -137,7 +168,7 @@ function loadQuestion() {
           startSeconds: start,
           endSeconds: end
         });
-        player.playVideo();
+        // player.playVideo();
         // player.cueVideoById({
         //   videoId: videoId,
         //   startSeconds: start,
@@ -157,6 +188,7 @@ function loadQuestion() {
         return (match && match[7].length === 11) ? match[7] : false;
       }
       
+
 
 function startTimer() {
     let time = timePerQuestion;
