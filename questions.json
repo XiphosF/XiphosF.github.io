@@ -1,38 +1,23 @@
 {
     "facile": [
       {
-        "question": "Quelle est la capitale de la France ?",
-        "answer": "Paris",
-        "media": null
-      },
-      {
-        "question": "Quel animal peut-on voir sur cette image ?",
-        "answer": "Un lion",
-        "media": "<img src='/api/placeholder/400/300' alt='Image d'un lion'>"
-      },
-      {
-        "question": "Combien y a-t-il de continents sur Terre ?",
-        "answer": "7",
-        "media": null
-      },
-      {
-        "question": "Quelle planète est surnommée la planète rouge ?",
-        "answer": "Mars",
-        "media": null
-      },
-      {
-        "question": "Quel est le plus grand mammifère terrestre ?",
-        "answer": "L'éléphant d'Afrique",
-        "media": null
-      },
-      {
         "question": "Que fait le personnage dans cette vidéo ?",
         "answer": "Il joue du piano",
         "media": {
           "type": "video",
           "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
           "start": 15,
-          "end": 30
+          "end": 25
+        }
+      },
+      {
+        "question": "Que fait le personnage dans cette vidéo ? float",
+        "answer": "Il joue du piano",
+        "media": {
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "start": 15.8,
+          "end": 25.5
         }
       }
     ],
