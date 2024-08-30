@@ -5,7 +5,7 @@ let timer;
 let timePerQuestion;
 let numberOfQuestions;
 let player;
-let playerReady = False;
+let playerReady = false;
 
 document.getElementById('startQuiz').addEventListener('click', startQuiz);
 document.getElementById('nextButton').addEventListener('click', nextQuestion);
