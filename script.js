@@ -6,6 +6,8 @@ let timePerQuestion;
 let numberOfQuestions;
 let player;
 let playerReady = false;
+let start_timestamp=0;
+let end_timestamp=0;
 
 document.getElementById('startQuiz').addEventListener('click', startQuiz);
 document.getElementById('nextButton').addEventListener('click', nextQuestion);
@@ -44,9 +46,21 @@ window.onYouTubeIframeAPIReady = function() {
   }
   
   function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.ENDED) {
+    if (event.data == YT.PlayerState.PAUSED) {
       startTimer();
     }
+    if (event.data == YT.PlayerState.ENDED) {
+        startTimer();
+      }
+    // if (event.data == YT.PlayerState.CUED){
+    //     player.playVideo();
+    //     var playDuration = (end_timestamp - start_timestamp) * 1000;
+
+    //     setTimeout(function(){
+    //         player.pauseVideo();
+    //         console.log("AAAAAAAAAAAAAAAAA")
+    //     }, playDuration);
+    // }
   }
 
 // Charger les questions depuis le fichier JSON
@@ -123,8 +137,18 @@ function loadQuestion() {
           startSeconds: start,
           endSeconds: end
         });
-      
         player.playVideo();
+        // player.cueVideoById({
+        //   videoId: videoId,
+        //   startSeconds: start,
+        // });
+        
+    
+        // player.seekTo(start, true);
+        // start_timestamp=start
+        // end_timestamp=end
+      
+        // player.playVideo();
       }
       
       function extractYouTubeVideoId(url) {
