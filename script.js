@@ -18,9 +18,13 @@ function loadYouTubeAPI() {
   }
   
   loadYouTubeAPI();
-  
-  // Fonction appelée lorsque l'API YouTube est prête
-  window.onYouTubeIframeAPIReady = function() {
+
+// Fonction appelée lorsque l'API YouTube est prête
+window.onYouTubeIframeAPIReady = function() {
+    // Ne créez pas le lecteur ici, nous le créerons lorsque nécessaire
+  };
+
+  function createYouTubePlayer() {
     player = new YT.Player('youtubePlayer', {
       height: '360',
       width: '640',
@@ -28,7 +32,7 @@ function loadYouTubeAPI() {
         'onStateChange': onPlayerStateChange
       }
     });
-  };
+  }
   
   function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
@@ -72,33 +76,47 @@ function loadQuestion() {
     document.getElementById('answer').style.display = 'none';
     document.getElementById('answer').textContent = '';
     document.getElementById('nextButton').style.display = 'none';
-  
-    if (question.media && question.media.type === 'video') {
-      loadVideoQuestion(question.media);
-    } else {
-      document.getElementById('media').innerHTML = question.media || '';
-      startTimer();
-    }
-  }
-  
-  function loadVideoQuestion(mediaInfo) {
-    const { url, start, end } = mediaInfo;
-    const videoId = extractYouTubeVideoId(url);
+    const mediaContainer = document.getElementById('media');
+    mediaContainer.innerHTML = '';
     
-    player.loadVideoById({
-      videoId: videoId,
-      startSeconds: start,
-      endSeconds: end
-    });
+    if (question.media && question.media.type === 'video') {
+        // Créer le conteneur pour le lecteur YouTube
+        const youtubePlayerDiv = document.createElement('div');
+        youtubePlayerDiv.id = 'youtubePlayer';
+        mediaContainer.appendChild(youtubePlayerDiv);
+    
+        // Créer le lecteur YouTube si ce n'est pas déjà fait
+        if (!player) {
+          createYouTubePlayer();
+        }
+    
+        loadVideoQuestion(question.media);
+      } else if (question.media) {
+        mediaContainer.innerHTML = question.media;
+        startTimer();
+      } else {
+        startTimer();
+      }
+    }
   
-    player.playVideo();
-  }
+    function loadVideoQuestion(mediaInfo) {
+        const { url, start, end } = mediaInfo;
+        const videoId = extractYouTubeVideoId(url);
+        
+        player.loadVideoById({
+          videoId: videoId,
+          startSeconds: start,
+          endSeconds: end
+        });
+      
+        player.playVideo();
+      }
   
-  function extractYouTubeVideoId(url) {
-    const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
-    const match = url.match(regExp);
-    return (match && match[7].length === 11) ? match[7] : false;
-  }
+      function extractYouTubeVideoId(url) {
+        const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[7].length === 11) ? match[7] : false;
+      }
   
 
 function startTimer() {
