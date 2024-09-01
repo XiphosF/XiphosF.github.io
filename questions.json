@@ -1,13 +1,13 @@
 {
-    "debug":[    {
-        "question":"Quel est le vrai prénom de Doumé ?",
-        "answer":"Stéphane",
+    "debug":[            {
+        "question":"Que souffle le père de Tiffany ?",
+        "answer":"Si les péages et sandwichs sont défrayés pour le midi",
         "media":{
             "type":"video",
-            "url":"https://www.youtube.com/watch?v=HcdFa5A52j0",
-            "start":94,
-            "end":115
-        }        
+            "url":"https://www.youtube.com/watch?v=S6j6vsgqyco",
+            "start":46,
+            "end":46
+        }
     }],
     "facile": [
         {
@@ -71,13 +71,13 @@
             }
         },
         {
-            "question":"Que souffle le père de Tiffany ?",
+            "question":"Quelle question lui fait demander le père de Tiffany ?",
             "answer":"Si les péages et sandwichs sont défrayés pour le midi",
             "media":{
                 "type":"video",
                 "url":"https://www.youtube.com/watch?v=tMDwIKP4qiM",
-                "start":45,
-                "end":45
+                "start":46,
+                "end":46
             }
         },
         {
@@ -201,7 +201,7 @@
         }        
     },
     {
-        "question": "Dans \"Quand on se drogue\", a quel étage sont-ils ?",
+        "question": "Dans \"Quand on se drogue\", à quel étage sont-ils ?",
         "answer": "rez de chaussée",
         "media": null
       },
@@ -221,7 +221,7 @@
         "media": null
       },
       {
-        "question": "Dans \"Quand on se drogue\", pour combien d'albums le producteur les signent ?",
+        "question": "Dans \"Quand on se drogue\", pour combien d'albums le producteur les signe ?",
         "answer": "2 albums",
         "media": null
       },
@@ -278,6 +278,56 @@
             "url":"https://www.youtube.com/watch?v=HcdFa5A52j0",
             "start":234,
             "end":244
+        }        
+    },
+    {
+        "question":"Quelle pièce vont ils devoir jouer ?",
+        "answer":"Roméo et Juliette",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=S6j6vsgqyco",
+            "start":17,
+            "end":17
+        }        
+    },
+    {
+        "question":"Fleur, qui devient ... ?",
+        "answer":"Papillon",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=S6j6vsgqyco",
+            "start":32,
+            "end":44.1
+        }        
+    },
+    {
+        "question":"Comment s'appelle sa version de la pièce ?",
+        "answer":"Mais où est donc passée cette sacrée Juliette",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=S6j6vsgqyco",
+            "start":98.5,
+            "end":103
+        }        
+    },
+    {
+        "question":"Quels sont les nouveaux noms de Roméo et Juliette ?",
+        "answer":"Jacob et Jasmina",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=S6j6vsgqyco",
+            "start":110,
+            "end":110
+        }        
+    },
+    {
+        "question":"Quels personnages sont sélectionnés pour jouer Roméo et Juliette à la fin du sketch ?",
+        "answer":"Gaspard et Baltazard",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=S6j6vsgqyco",
+            "start":9,
+            "end":17
         }        
     }
 
