@@ -1,15 +1,95 @@
 {
     "debug":[         {
-        "question":"Qu'est-ce qu'il lui donne ?",
-        "answer":"La note de frais pour la guitare",
+        "question":"Qu'est ce qu'il va faire du côté obscur ?",
+        "answer":"se taper des putes, boire des bières et jouer au casino",
         "media":{
             "type":"video",
-            "url":"https://www.youtube.com/watch?v=lO3ZyBI8AxM",
-            "start":325,
-            "end":338
+            "url":"https://www.youtube.com/watch?v=ksqLWT7Az34",
+            "start":108.5,
+            "end":113.6
         }
     }],
     "facile": [
+        {
+            "question":"Qu'est ce qu'il va faire du côté obscur ?",
+            "answer":"se taper des putes, boire des bières et jouer au casino",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=ksqLWT7Az34",
+                "start":108.5,
+                "end":113.6
+            }
+        },
+        {
+            "question":"Il était un petit ewok, ...",
+            "answer":"qui avait un sabre laser dans le cul",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=ksqLWT7Az34",
+                "start":87.9,
+                "end":94
+            }
+        },
+        {
+            "question":"Qui est son dealer dans le sketch ?",
+            "answer":"L'empereur",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=ksqLWT7Az34",
+                "start":11,
+                "end":21.8
+            }
+        },
+        {
+            "question":"A quel sport joue t-il contre Dark Vador plus tard dans le sketch?",
+            "answer":"Au ping pong",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=ksqLWT7Az34",
+                "start":76,
+                "end":76
+            }
+        },
+        {
+            "question":"Est-ce qu'il est obligé de tout enlever aussi ?",
+            "answer":"Non, il sort juste son sexe",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=ksqLWT7Az34",
+                "start":65,
+                "end":72.5
+            }
+        },
+        {
+            "question":"Comment le stormtrooper fait pour pisser ?",
+            "answer":"Il enlève toute l’armure",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=ksqLWT7Az34",
+                "start":50,
+                "end":50
+            }
+        },
+        {
+            "question":"Avec sa coupe de cheveux, à quoi ressemble princesse Leïa ?",
+            "answer":"A un caniche",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=ksqLWT7Az34",
+                "start":25,
+                "end":25
+            }
+        },
+        {
+            "question":"Qu'est-ce qu'il lui donne ?",
+            "answer":"La note de frais pour la guitare",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=lO3ZyBI8AxM",
+                "start":325,
+                "end":338
+            }
+        },
         {
             "question":"Quelle chanson Patrick joue t-il pour la famille mongole ?",
             "answer":"Qui a le droit",
