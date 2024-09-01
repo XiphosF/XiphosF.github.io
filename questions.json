@@ -81,7 +81,7 @@
             }
         },
         {
-            "question":"Comment enlève t’il le soutien gorge ?",
+            "question":"Comment enlève-t-il le soutien gorge ?",
             "answer":"En le coupant avec un ciseau",
             "media":{
                 "type":"video",
@@ -271,7 +271,7 @@
         }        
     },
     {
-        "question":"Qu'est est le nom de leur magasin ?",
+        "question":"Quel est le nom de leur magasin ?",
         "answer":"SO LOL",
         "media":{
             "type":"video",
@@ -307,11 +307,11 @@
             "type":"video",
             "url":"https://www.youtube.com/watch?v=S6j6vsgqyco",
             "start":98.5,
-            "end":103
+            "end":103.8
         }        
     },
     {
-        "question":"Quels sont les nouveaux noms de Roméo et Juliette ?",
+        "question":"Quels sont les nouveaux noms de Roméo et Juliette dans cette version ?",
         "answer":"Jacob et Jasmina",
         "media":{
             "type":"video",
@@ -328,6 +328,81 @@
             "url":"https://www.youtube.com/watch?v=S6j6vsgqyco",
             "start":9,
             "end":17
+        }        
+    },
+    {
+        "question":"Dans \"La salle d'embarquement\", quels personnages font les stewards",
+        "answer":"Enzo et Sydney",
+        "media":null     
+    },
+    {
+        "question":"Dans quel pays vont-ils ?",
+        "answer":"En Birmanie",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=cBJ9CkKuPJ0",
+            "start":64,
+            "end":64
+        }        
+    },
+    {
+        "question":"Où ont été vidées les pompes à chiotte ?",
+        "answer":"Au dessus de l'Atlantique",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=cBJ9CkKuPJ0",
+            "start":75,
+            "end":75
+        }        
+    },
+    {
+        "question":"Quels sont tous les hashtags cités ?",
+        "answer":"#CiaoParis, #OKLM, #L'avion a décollé",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=cBJ9CkKuPJ0",
+            "start":106,
+            "end":106
+        }        
+    },
+    {
+        "question":"Quelle est la compagnie aérienne ?",
+        "answer":"Bryan Air",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=cBJ9CkKuPJ0",
+            "start":163,
+            "end":172
+        }        
+    },
+    {
+        "question":"De où à où s'étend le devoir ?",
+        "answer":"De la porte 24 aux cartes postales (ET INVERSATION)",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=cBJ9CkKuPJ0",
+            "start":174,
+            "end":180.2
+        }        
+    },
+    {
+        "question":"Sur quoi tirent-ils ?",
+        "answer":"Un sac Hello Kitty (Hello kiki)",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=cBJ9CkKuPJ0",
+            "start":211,
+            "end":220
+        }        
+    },
+    {
+        "question":"Oh c'est ... ?",
+        "answer":"le début des vacances",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=cBJ9CkKuPJ0",
+            "start":226.5,
+            "end":233.1
         }        
     }
 
