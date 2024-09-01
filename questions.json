@@ -1,15 +1,95 @@
 {
-    "debug":[{
-        "question":"Quelle insulte dit-il trop tôt ?",
-        "answer":"Sale chiennasse",
+    "debug":[        {
+        "question":"Qui est la femme par rapport à lui ?",
+        "answer":"Sa mère",
         "media":{
             "type":"video",
             "url": "https://www.youtube.com/watch?v=hFwrArBEC9o",
-            "start":63,
-            "end":63
+            "start":74.5,
+            "end":74.5
         }
     }],
     "facile": [
+        {
+            "question":"Comment s’appellent les parents de Tiffany ?",
+            "answer":"Franck et Christine",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=tMDwIKP4qiM",
+                "start":19,
+                "end":25
+            }
+        },
+        {
+            "question":"Comment le père de Tiffany menace sa concurrente ?",
+            "answer":"Il menace de faire piquer son clébard",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=tMDwIKP4qiM",
+                "start":107,
+                "end":107
+            }
+        },
+        {
+            "question":"Quel est le plan du père de Tiffany pour la faire décoller ?",
+            "answer":"La foutre en bikini comme toutes les chaudasses de la tv.",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=tMDwIKP4qiM",
+                "start":101,
+                "end":101
+            }
+        },
+        {
+            "question":"Que va chanter Tiffany ?",
+            "answer":"On écrit sur les murs, Kids United.",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=tMDwIKP4qiM",
+                "start":117,
+                "end":132.5
+            }
+        },
+        {
+            "question":"Quelle autre émission Kidou est annoncée à la fin du sketch ?",
+            "answer":"Koh-Lanta Kidou.",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=tMDwIKP4qiM",
+                "start":208,
+                "end":220
+            }
+        },
+        {
+            "question":"Quel acteur joue le rôle de Nikos Aliagas dans ce sketch ?",
+            "answer":"Kad Merad",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=tMDwIKP4qiM",
+                "start":9.5,
+                "end":9.5
+            }
+        },
+        {
+            "question":"Que souffle le père de Tiffany ?",
+            "answer":"Si les péages et sandwichs sont défrayés pour le midi",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=tMDwIKP4qiM",
+                "start":45,
+                "end":45
+            }
+        },
+        {
+            "question":"Comment enlève t’il le soutien gorge ?",
+            "answer":"En le coupant avec un ciseau",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=hFwrArBEC9o",
+                "start":52,
+                "end":52
+            }
+        },
         {
             "question":"Quelle insulte dit-il trop tôt ?",
             "answer":"Sale chiennasse",
@@ -18,6 +98,16 @@
                 "url": "https://www.youtube.com/watch?v=hFwrArBEC9o",
                 "start":63,
                 "end":63
+            }
+        },
+        {
+            "question":"Qui est la femme par rapport à lui ?",
+            "answer":"Sa mère",
+            "media":{
+                "type":"video",
+                "url": "https://www.youtube.com/watch?v=hFwrArBEC9o",
+                "start":74.5,
+                "end":74.5
             }
         },
       {
@@ -51,6 +141,16 @@
         }
     },
     {
+        "question":"Quel ministre arrive en retard ?",
+        "answer":"Le ministre des transports",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=8LSOsobZcF8",
+            "start":63,
+            "end":70
+        }
+    },
+    {
         "question":"Qu'est ce qu'il allait faire ?",
         "answer":"Abolir le tiret",
         "media":{
@@ -71,6 +171,16 @@
         }        
     },
     {
+        "question":"Quelle est la récompense du bingo ?",
+        "answer":"Le ministère de l’agriculture",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=8LSOsobZcF8",
+            "start":139,
+            "end":147
+        }        
+    },
+    {
         "question":"Que va faire le NOUVEAU ministre de la jeunesse et des sports ?",
         "answer":"Refoutre la bière dans les stades (y’en a ras le cul de la Tourtel Twist)",
         "media":{
@@ -80,18 +190,47 @@
             "end":165.7
         }        
     },
-
-
     {
-        "question": "Quel est le plus grand océan du monde ?",
-        "answer": "L'océan Pacifique",
+        "question":"Quelles sont les dernières paroles du nouveau ministre des sports ?",
+        "answer":"Y a péno PD",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=8LSOsobZcF8",
+            "start":168,
+            "end":168
+        }        
+    },
+    {
+        "question": "Dans \"Quand on se drogue\", a quel étage sont-ils ?",
+        "answer": "rez de chaussée",
         "media": null
       },
       {
-        "question": "En quelle année a eu lieu la Révolution française ?",
-        "answer": "1789",
-        "media": "<img src='/api/placeholder/400/300' alt='Image de la Révolution française'>"
+        "question": "Dans \"Quand on se drogue\", que dit-il après avoir sniffé du sucre de Cannes ?",
+        "answer": "Watcha jsuis trop die",
+        "media": null
+      },
+      {
+        "question": "Dans \"Quand on se drogue\", à cause de quelle drogue se disent-ils \"je t'aime\" ?",
+        "answer": "L'Ecstasy",
+        "media": null
+      },
+      {
+        "question": "Dans \"Quand on se drogue\", quel est le nom de leurs groupe ?",
+        "answer": "Les (juste les)",
+        "media": null
+      },
+      {
+        "question": "Dans \"Quand on se drogue\", pour combien d'albums le producteur les signent ?",
+        "answer": "2 albums",
+        "media": null
+      },
+      {
+        "question": "Dans \"Quand on se drogue\", complétez \"Oh putain Maman, ...\"?",
+        "answer": "Oh putain Maman, t'es trop bonne",
+        "media": null
       }
+
     ],
     "moyen": [
       {
