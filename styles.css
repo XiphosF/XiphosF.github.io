@@ -109,6 +109,15 @@ h1 {
     display: none;
 }
 
+.ytp-title {
+	display: none !important;
+}
+
+.ytp-expand-pause-overlay .ytp-pause-overlay {
+    display: none !important;
+}
+
 #nextButton {
     display: none;
 }
+

@@ -1,15 +1,25 @@
 {
     "debug":[{
-        "question":"Depuis combien de temps il attend ?",
-        "answer":"30 ans",
+        "question":"Quelle insulte dit-il trop tôt ?",
+        "answer":"Sale chiennasse",
         "media":{
             "type":"video",
-            "url":"https://www.youtube.com/watch?v=hFwrArBEC9o",
-            "start":18,
-            "end":24.4
+            "url": "https://www.youtube.com/watch?v=hFwrArBEC9o",
+            "start":63,
+            "end":63
         }
     }],
     "facile": [
+        {
+            "question":"Quelle insulte dit-il trop tôt ?",
+            "answer":"Sale chiennasse",
+            "media":{
+                "type":"video",
+                "url": "https://www.youtube.com/watch?v=hFwrArBEC9o",
+                "start":63,
+                "end":63
+            }
+        },
       {
         "question":"Si on apprend pas à conduire en Bentley c’est parce qu’on passe sa vie en ___ ?",
         "answer":"Fiat Punto",
@@ -31,9 +41,56 @@
         }
     },
     {
+        "question":"A quel film fait référence cette scène ?",
+        "answer":"40 ans toujours puceau",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=hFwrArBEC9o",
+            "start":137,
+            "end":170
+        }
+    },
+    {
+        "question":"Qu'est ce qu'il allait faire ?",
+        "answer":"Abolir le tiret",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=8LSOsobZcF8",
+            "start":115,
+            "end":122.1
+        }        
+    },
+    {
+        "question":"Qu’était en train d’organiser le ministre de la culture ?",
+        "answer":"Un festival de world music en Dordogne",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=8LSOsobZcF8",
+            "start":127,
+            "end":132.3
+        }        
+    },
+    {
+        "question":"Que va faire le NOUVEAU ministre de la jeunesse et des sports ?",
+        "answer":"Refoutre la bière dans les stades (y’en a ras le cul de la Tourtel Twist)",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=8LSOsobZcF8",
+            "start":159,
+            "end":165.7
+        }        
+    },
+
+
+    {
         "question": "Quel est le plus grand océan du monde ?",
         "answer": "L'océan Pacifique",
         "media": null
+      },
+      {
+        "question": "En quelle année a eu lieu la Révolution française ?",
+        "answer": "1789",
+        "media": "<img src='/api/placeholder/400/300' alt='Image de la Révolution française'>"
       }
     ],
     "moyen": [
