@@ -1,15 +1,75 @@
 {
-    "debug":[            {
-        "question":"Que souffle le père de Tiffany ?",
-        "answer":"Si les péages et sandwichs sont défrayés pour le midi",
+    "debug":[         {
+        "question":"Qu'est-ce qu'il lui donne ?",
+        "answer":"La note de frais pour la guitare",
         "media":{
             "type":"video",
-            "url":"https://www.youtube.com/watch?v=S6j6vsgqyco",
-            "start":46,
-            "end":46
+            "url":"https://www.youtube.com/watch?v=lO3ZyBI8AxM",
+            "start":325,
+            "end":338
         }
     }],
     "facile": [
+        {
+            "question":"Quelle chanson Patrick joue t-il pour la famille mongole ?",
+            "answer":"Qui a le droit",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=lO3ZyBI8AxM",
+                "start":248,
+                "end":248
+            }
+        },
+        {
+            "question":"Pourquoi Patrick pleure t-il ?",
+            "answer":"La bagnole est complètement chargée, ils vont être tassés pour le retour.",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=lO3ZyBI8AxM",
+                "start":257,
+                "end":268.5
+            }
+        },
+        {
+            "question":"Qu'est-ce que fait Patrick ?",
+            "answer":"Il cherche un hélico",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=lO3ZyBI8AxM",
+                "start":216,
+                "end":228.5
+            }
+        },
+        {
+            "question":"Qu'est-il en train de faire ?",
+            "answer":"Il est en train de chier",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=lO3ZyBI8AxM",
+                "start":189,
+                "end":206
+            }
+        },
+        {
+            "question":"Quel film ça lui rappelle ?",
+            "answer":"Brokeback Mountain",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=lO3ZyBI8AxM",
+                "start":154,
+                "end":162.9
+            }
+        },
+        {
+            "question":"Qu'est ce que Patrick peut faire ?",
+            "answer":"Il peut pleurer",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=lO3ZyBI8AxM",
+                "start":30,
+                "end":43.4
+            }
+        },
         {
             "question":"Comment s’appellent les parents de Tiffany ?",
             "answer":"Franck et Christine",
@@ -382,7 +442,7 @@
             "type":"video",
             "url":"https://www.youtube.com/watch?v=cBJ9CkKuPJ0",
             "start":174,
-            "end":180.2
+            "end":180.7
         }        
     },
     {
@@ -402,7 +462,7 @@
             "type":"video",
             "url":"https://www.youtube.com/watch?v=cBJ9CkKuPJ0",
             "start":226.5,
-            "end":233.1
+            "end":233.6
         }        
     }
 
