@@ -1,13 +1,13 @@
 {
-    "debug":[        {
-        "question":"Qui est la femme par rapport à lui ?",
-        "answer":"Sa mère",
+    "debug":[    {
+        "question":"Quel est le vrai prénom de Doumé ?",
+        "answer":"Stéphane",
         "media":{
             "type":"video",
-            "url": "https://www.youtube.com/watch?v=hFwrArBEC9o",
-            "start":74.5,
-            "end":74.5
-        }
+            "url":"https://www.youtube.com/watch?v=HcdFa5A52j0",
+            "start":94,
+            "end":115
+        }        
     }],
     "facile": [
         {
@@ -229,7 +229,57 @@
         "question": "Dans \"Quand on se drogue\", complétez \"Oh putain Maman, ...\"?",
         "answer": "Oh putain Maman, t'es trop bonne",
         "media": null
-      }
+      },
+      {
+        "question":"Comment s'appellent-elles, et quel est le nom du magasin ?",
+        "answer":"Mélanie et Nathalie, la Malle aux chaussures",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=HcdFa5A52j0",
+            "start":53,
+            "end":53
+        }        
+    },
+    {
+        "question":"Quel est le vrai prénom de Doumé ?",
+        "answer":"Stéphane",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=HcdFa5A52j0",
+            "start":94,
+            "end":115
+        }        
+    },
+    {
+        "question":"Quel est le concept du magasin ?",
+        "answer":"Le concept c'est qu'y a pas de concept",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=HcdFa5A52j0",
+            "start":199,
+            "end":209
+        }        
+    },
+    {
+        "question":"Qu'est ce que le vendeur a oublié de faire ?",
+        "answer":"Nourrir Bécassine (leur poney)",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=HcdFa5A52j0",
+            "start":220,
+            "end":220
+        }        
+    },
+    {
+        "question":"Qu'est est le nom de leur magasin ?",
+        "answer":"SO LOL",
+        "media":{
+            "type":"video",
+            "url":"https://www.youtube.com/watch?v=HcdFa5A52j0",
+            "start":234,
+            "end":244
+        }        
+    }
 
     ],
     "moyen": [
