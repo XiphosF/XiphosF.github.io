@@ -1,15 +1,75 @@
 {
     "debug":[         {
-        "question":"Qu'est ce qu'il n'y a pas à la pêche à la mouche ?",
-        "answer":"Y a pas de moulinette",
+        "question":"Combien de coups-de-poing le docteur se prend-il dans le sketch ?",
+        "answer":"3",
         "media":{
             "type":"video",
-            "url":"https://www.youtube.com/watch?v=OlZfibPXheo",
-            "start":110,
-            "end":123.2
+            "url":"https://www.youtube.com/watch?v=WM1J4cf0RPs",
+            "start":157,
+            "end":172
         }
     }],
     "facile": [
+        {
+            "question":"Combien de coups-de-poing le docteur se prend-il dans le sketch ?",
+            "answer":"3",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=WM1J4cf0RPs",
+                "start":157,
+                "end":172
+            }
+        },
+        {
+            "question":"Quel est le sexe de l'enfant ?",
+            "answer":"Une fille",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=WM1J4cf0RPs",
+                "start":147,
+                "end":156
+            }
+        },
+        {
+            "question":"Qu'est-ce qui le dérange ?",
+            "answer":"Il ne les verra plus quand elle aura accouché",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=WM1J4cf0RPs",
+                "start":131,
+                "end":137
+            }
+        },
+        {
+            "question":"Quels sont les résultats du laboratoire d'analyse ?",
+            "answer":"Ils vont avoir un enfant",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=WM1J4cf0RPs",
+                "start":84,
+                "end":91
+            }
+        },
+        {
+            "question":"Qu'est-ce qu'on peut savoir d'autre grace à la technologie ?",
+            "answer":"S'il est pas triso",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=WM1J4cf0RPs",
+                "start":41,
+                "end":45
+            }
+        },
+        {
+            "question":"Qu'est-ce qu'il doit leur dire ?",
+            "answer":"Vous allez avoir un enfant",
+            "media":{
+                "type":"video",
+                "url":"https://www.youtube.com/watch?v=WM1J4cf0RPs",
+                "start":22,
+                "end":33.3
+            }
+        },
         {
             "question":"Qu'est ce qu'il n'y a pas à la pêche à la mouche ?",
             "answer":"Y a pas de moulinette",
